@@ -1,0 +1,32 @@
+{
+  "name": "node-replicate",
+  "version": "1.0.0",
+  "description": "A NodeJS client for Replicate.",
+  "type": "module",
+  "main": "src/index.js",
+  "files": [
+    "/src",
+    "/README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oelin/node-replicate.git"
+  },
+  "keywords": [
+    "ai",
+    "api",
+    "client",
+    "midjourney",
+    "replicate",
+    "stable-diffusion"
+  ],
+  "author": "oelin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oelin/node-replicate/issues"
+  },
+  "homepage": "https://github.com/oelin/node-replicate#readme",
+  "dependencies": {
+    "chiaki": "^1.0.5"
+  }
+}
