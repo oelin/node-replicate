@@ -1,7 +1,7 @@
 import Model from './Model.js'
 
 
-export {
+export default {
 	model(identifier) {
 		return new Model(...identifier.split(':'))
 	}
