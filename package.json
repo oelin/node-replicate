@@ -1,6 +1,6 @@
 {
   "name": "node-replicate",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A NodeJS client for Replicate.",
   "type": "module",
   "main": "src/index.js",

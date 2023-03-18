@@ -29,7 +29,7 @@ export default class Model {
 		let prediction = await this.createPrediction(inputs)
 
 		while (! prediction.hasTerminalStatus()) {
-			onPrediction(prediction)
+			onUpdate(prediction)
 
 			await sleep(pollingInterval)
 			prediction = await prediction.load()
