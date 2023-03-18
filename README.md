@@ -21,6 +21,8 @@ console.log(prediction.output)
 // [ "https://replicate.delivery/pbxt/nSREat5H54rxGJo1kk2xLLG2fpr0NBE0HBD5L0jszLoy8oSIA/out-0.png" ]
 ```
 
+![](https://replicate.delivery/pbxt/nSREat5H54rxGJo1kk2xLLG2fpr0NBE0HBD5L0jszLoy8oSIA/out-0.png)
+
 
 ## Introduction
 
@@ -44,7 +46,6 @@ npm i node-replicate
 
 
 ## Getting Started
-
 
 Like `replicate-js`, this package exports `model`, which can be used to access a particular model on Replicate. A model's identifier consists of a *path* (e.g. `stability-ai/stable-diffusion`) and a *version* (e.g. `db21...e5bf`) separated by a colon. You can obtain this information from a model's home page on Replicate.
 
