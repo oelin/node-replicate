@@ -31,7 +31,7 @@ console.log(prediction.output)
 
 * Use any public model on Replicate 🔮.
 * Track a model's progress during inference ⌛.
-* Very lightweight - under 100 lines of code! 
+* Very lightweight - under 100 lines of code! 🕊.
 
 
 ## Installation
@@ -55,9 +55,7 @@ const model = replicate.model("stability-ai/stable-diffusion:db21e45d3f7023abc2a
 Once you've obtained a model identifier, you can run the model using `predict`. This method takes in one or more parameters such as `prompt`. The specific parameters for a model can also be found on its home page (e.g. [https://replicate.com/stability-ai/stable-diffusion/api](https://replicate.com/stability-ai/stable-diffusion/api)).
 
 ```js
-const prediction = await model.predict({
-        prompt: "an astronaut riding on a horse",
-})
+const prediction = await model.predict({ prompt: "an astronaut riding on a horse" })
 ```
 
 This will return a `Prediction` object containing the model's output, as well as other metadata. The output is a JavaScript object, typically an array, containing one or more results depending on how you queried the model. For instance, most image synthesis models return an array of image URLs.
@@ -65,13 +63,15 @@ This will return a `Prediction` object containing the model's output, as well as
 To track a model's progress during inference, you can specify an `onUpdate` callback:
 
 ```js
-const prediction = await model.predict({
-        prompt: "an astronaut riding on a horse",
-}, {
-        onUpdate(prediction) {
-            console.log(prediction.status) 
+const prediction = await model.predict(
+        {
+                prompt: "an astronaut riding on a horse",
+        }, {
+                onUpdate(prediction) {
+                        console.log(prediction.status) 
+                }
         }
-})
+)
 ```
 
 
