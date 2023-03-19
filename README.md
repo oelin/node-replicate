@@ -78,7 +78,7 @@ const prediction = await replicate
       onUpdate(prediction) {
         console.log(prediction.status)
       }
-    }
+    },
   )
 
 console.log(prediction.output)
