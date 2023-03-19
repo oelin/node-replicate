@@ -1,4 +1,4 @@
-import chiaki from 'chiaki'
+import fetch from 'chiaki'
 import Prediction from './Prediction.js'
 
 
@@ -39,7 +39,7 @@ export default class Model {
 
 	async createPrediction(inputs) {
 
-		return await chiaki({
+		return await fetch({
 			hostname: 'replicate.com',
 			path: `/api/models/${this.path}/versions/${this.version}/predictions`,
 			method: 'POST',
