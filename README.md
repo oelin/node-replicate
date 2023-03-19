@@ -69,7 +69,8 @@ To track a model's progress during inference, you can specify an `onUpdate` call
 const prediction = await model.predict(
         {
                 prompt: "an astronaut riding on a horse",
-        }, {
+        }, 
+        {
                 onUpdate(prediction) {
                         console.log(prediction.status) 
                 }
