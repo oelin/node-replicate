@@ -40,7 +40,7 @@ npm i node-replicate
 
 ## Usage
 
-Run a Replicate model by passing its identifier to `replicate.model()` and then calling `predict()` asynchronously.
+To run a Replicate model, pass its [identifier](https://replicate.com/stability-ai/stable-diffusion/api) to `replicate.model()` and then invoke `predict()` asynchronously.
 
 ```js
 import replicate from "node-replicate"
@@ -58,7 +58,7 @@ console.log(prediction.output)
 // [ "https://replicate.delivery/pbxt/f4nlztv3uz1iFC4AEf2wBYQGTezdVeysvtZUtwfsvZOJDN6AC/out-0.png" ]
 ```
 
-To track a pending prediction you can also specify an `onUpdate` callback:
+You can also track a pending prediction by passing an `onUpdate()` callback.
 
 ```js
 import replicate from "node-replicate"
