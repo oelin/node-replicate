@@ -20,7 +20,6 @@ export default class Model {
 		inputs, 
 		{ 
 			onUpdate = () => {},
-			onFailure = () => {},
 		} = {},
 		{
 			pollingInterval = 500,
