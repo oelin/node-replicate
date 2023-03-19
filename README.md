@@ -20,9 +20,11 @@ console.log(prediction.output)
 
 <img src='https://replicate.delivery/pbxt/f4nlztv3uz1iFC4AEf2wBYQGTezdVeysvtZUtwfsvZOJDN6AC/out-0.png' width=500px>
 
+
 ## Introduction
 
 [Replicate](https://replicate.com) is an online platform for running machine learning models in the cloud. This package implements a lightweight client for their anonymous API, allowing you to run [Stable Diffusion](https://replicate.com/stability-ai/stable-diffusion), [Midjourney](https://replicate.com/prompthero/openjourney) and other cutting-edge models witih just a few lines of code 😊👌.
+
 
 ## Features
 
@@ -37,6 +39,7 @@ Install with npm.
 ```
 npm i node-replicate
 ```
+
 
 ## Usage
 
@@ -82,6 +85,7 @@ console.log(prediction.output)
 
 // [ "https://replicate.delivery/pbxt/f4nlztv3uz1iFC4AEf2wBYQGTezdVeysvtZUtwfsvZOJDN6AC/out-0.png" ]
 ```
+
 
 ## Contributing 
 
