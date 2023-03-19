@@ -1,4 +1,4 @@
-import chiaki from 'chiaki'
+import fetch from 'chiaki'
 
 
 export const PredictionStatus = {
@@ -25,7 +25,7 @@ export default class Prediction {
 	}
 
 	async load() {
-		return await chiaki(`https://replicate.com/api/models${this.version.model.absolute_url}/versions/${this.version_id}/predictions/${this.uuid}`)
+		return await fetch(`https://replicate.com/api/models${this.version.model.absolute_url}/versions/${this.version_id}/predictions/${this.uuid}`)
 			.then(response => JSON.parse(response.body))
 			.then(response => new Prediction(response.prediction))
 	}
