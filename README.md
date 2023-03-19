@@ -83,3 +83,7 @@ console.log(prediction.output)
 // [ "https://replicate.delivery/pbxt/f4nlztv3uz1iFC4AEf2wBYQGTezdVeysvtZUtwfsvZOJDN6AC/out-0.png" ]
 ```
 
+
+## Contributing 
+
+Have a feature you'd like to see in this package? Create a [pull request](https://github.com/oelin/node-replicate/pulls) or open an [issue](https://github.com/oelin/node-replicate/issues). Some planned features include support for file uploads and integration with the authenticated API.
