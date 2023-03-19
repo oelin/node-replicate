@@ -23,7 +23,7 @@ console.log(prediction.output)
 
 ## Introduction
 
-[Replicate](https://replicate.com) is an online platform for running machine learning models in the cloud. This package implements a lightweight client for their anonymous API, allowing you to run [Stable Diffusion](https://replicate.com/stability-ai/stable-diffusion), [Midjourney](https://replicate.com/prompthero/openjourney) and other cutting-edge models witih just a few lines of code 😊👌.
+[Replicate](https://replicate.com) is an online platform for running machine learning models in the cloud. This package implements a lightweight client for their anonymous API, allowing you to run [Stable Diffusion](https://replicate.com/stability-ai/stable-diffusion), [Midjourney](https://replicate.com/prompthero/openjourney) and other cutting-edge models with just a few lines of code 😊👌.
 
 
 ## Features
@@ -89,4 +89,4 @@ console.log(prediction.output)
 
 ## Contributing 
 
-Have a feature you'd like to see added? Create a [pull request](https://github.com/oelin/node-replicate/pulls) or open an [issue](https://github.com/oelin/node-replicate/issues). Some planned features include support for file uploads and integration with the *authenticated* Replicate API.
+Have a feature you'd like to see added? Create a [pull request](https://github.com/oelin/node-replicate/pulls) or open an [issue](https://github.com/oelin/node-replicate/issues). Some planned features include support for file uploads and integration with Replicate's authenticated API.
