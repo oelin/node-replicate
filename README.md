@@ -23,7 +23,7 @@ console.log(prediction.output)
 
 ## Introduction
 
-[Replicate](https://replicate.com) is an online platform for running machine learning models in the cloud. This package implements a lightweight client for their anonymous API, allowing you to run [Stable Diffusion](https://replicate.com/stability-ai/stable-diffusion), [Midjourney](https://replicate.com/prompthero/openjourney) and other cutting-edge models with just a few lines of code 😊👌.
+[Replicate](https://replicate.com) is an online platform for running machine learning models in the cloud. This package implements a lightweight client for their anonymous API, allowing you to run [Stable Diffusion](https://replicate.com/stability-ai/stable-diffusion), [Whisper](https://replicate.com/openai/whisper) and other cutting-edge models with just a few lines of code 😊👌.
 
 
 ## Features
@@ -31,6 +31,7 @@ console.log(prediction.output)
 * Run Replicate models anonymously 👻.
 * Track pending predictions ⌛.
 * Very lightweight - under 100 lines of code ⚡.
+
 
 ## Installation
 
@@ -43,7 +44,7 @@ npm i node-replicate
 
 ## Usage
 
-To run a Replicate model, pass its [identifier](https://replicate.com/stability-ai/stable-diffusion/api) to `replicate.model()` and then invoke `predict()` asynchronously.
+To run a model, just pass its identifier to `replicate.model()` and then call `predict()` asynchronously. You can find its identifier and prediction parameters on Replicate (e.g. [stability-ai/stable-diffusion](https://replicate.com/stability-ai/stable-diffusion/api)).
 
 ```js
 import replicate from "node-replicate"
@@ -61,7 +62,7 @@ console.log(prediction.output)
 // [ "https://replicate.delivery/pbxt/f4nlztv3uz1iFC4AEf2wBYQGTezdVeysvtZUtwfsvZOJDN6AC/out-0.png" ]
 ```
 
-You can also track a pending predictions by passing an `onUpdate()` callback.
+To track pending predictions, you can also specify an `onUpdate()` callback.
 
 ```js
 import replicate from "node-replicate"
