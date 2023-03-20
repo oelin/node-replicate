@@ -18,7 +18,7 @@ console.log(prediction.output)
 // [ "https://replicate.delivery/pbxt/f4nlztv3uz1iFC4AEf2wBYQGTezdVeysvtZUtwfsvZOJDN6AC/out-0.png" ]
 ```
 
-<img src='https://replicate.delivery/pbxt/f4nlztv3uz1iFC4AEf2wBYQGTezdVeysvtZUtwfsvZOJDN6AC/out-0.png' width=500px>
+<img src='https://replicate.delivery/pbxt/f4nlztv3uz1iFC4AEf2wBYQGTezdVeysvtZUtwfsvZOJDN6AC/out-0.png' width='50%'>
 
 
 ## Introduction
@@ -87,6 +87,58 @@ console.log(prediction.output)
 ```
 
 
+## Examples
+
+### 1. Visual Question-answering with [blip](https://replicate.com/salesforce/blip)
+
+Answer open-ended questions about images in natural language.
+
+<img src='https://replicate.delivery/pbxt/IVSaMZb8iBkELQvQya84wz5i1YfQC1HxrtSfSaL4QRTtsOlP/cat.jpg' width='50%'>
+
+```js
+import replicate from "node-replicate"
+
+const prediction = await replicate
+  .model(
+    "salesforce/blip:2e1dddc8621f72155f24cf2e0adbde548458d3cab9f00c0139eea840d0ac4746",
+   )
+  .predict({
+    image: 'https://replicate.delivery/pbxt/IVSaMZb8iBkELQvQya84wz5i1YfQC1HxrtSfSaL4QRTtsOlP/cat.jpg',
+    question: "What color is the cat?",
+    task: 'visual_question_answering',
+  })
+
+console.log(prediction.output)
+
+// "Answer: orange"
+```
+
+
+### 2. Image Style Transfer with [clipstyler](https://replicate.com/paper11667/clipstyler)
+
+Change the aesthetic style of an image using a text prompt.
+
+```js
+import replicate from "node-replicate"
+
+const prediction = await replicate
+  .model(
+    "salesforce/blip:2e1dddc8621f72155f24cf2e0adbde548458d3cab9f00c0139eea840d0ac4746",
+   )
+  .predict({
+    image: "https://replicate.delivery/pbxt/IVSrp3308R8Uq0sJx6yAozDSuLswkkq6IlaOS5liUI7TCwAU/cat.jpg",
+    iterations: 100,
+    text: "made from leaves",
+  })
+
+console.log(prediction.output)
+
+// [ ... ]
+```
+
+<img src='https://replicate.delivery/pbxt/enJ4EfiXbeXVXJpF14k5DQhJVUH1c7iKfe53lwiADOdFbtLFC/out.png' width='50%'>
+
+
 ## Contributing 
 
-Have a feature you'd like to see added? Create a [pull request](https://github.com/oelin/node-replicate/pulls) or open an [issue](https://github.com/oelin/node-replicate/issues). Some planned features include support for file uploads and integration with Replicate's authenticated API.
+Have a feature you'd like to see added? Create a [pull request](https://github.com/oelin/node-replicate/pulls) or open an [issue](https://github.com/oelin/node-replicate/issues).
