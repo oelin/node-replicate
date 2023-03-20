@@ -91,10 +91,6 @@ console.log(prediction.output)
 
 ### 1. Visual Question-answering with [blip](https://replicate.com/salesforce/blip)
 
-Answer open-ended questions about images in natural language.
-
-<img src='https://replicate.delivery/pbxt/IVSaMZb8iBkELQvQya84wz5i1YfQC1HxrtSfSaL4QRTtsOlP/cat.jpg' width='50%'>
-
 ```js
 import replicate from "node-replicate"
 
@@ -105,7 +101,7 @@ const prediction = await replicate
   .predict({
     image: 'https://replicate.delivery/pbxt/IVSaMZb8iBkELQvQya84wz5i1YfQC1HxrtSfSaL4QRTtsOlP/cat.jpg',
     question: "What color is the cat?",
-    task: 'visual_question_answering',
+    task: "visual_question_answering",
   })
 
 console.log(prediction.output)
@@ -115,8 +111,6 @@ console.log(prediction.output)
 
 
 ### 2. Image Style Transfer with [clipstyler](https://replicate.com/paper11667/clipstyler)
-
-Change the aesthetic style of an image using a text prompt.
 
 ```js
 import replicate from "node-replicate"
@@ -135,8 +129,6 @@ console.log(prediction.output)
 
 // [ ... ]
 ```
-
-<img src='https://replicate.delivery/pbxt/enJ4EfiXbeXVXJpF14k5DQhJVUH1c7iKfe53lwiADOdFbtLFC/out.png' width='50%'>
 
 
 ## Contributing 
