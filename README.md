@@ -30,7 +30,7 @@ console.log(prediction.output)
 ## Features
 
 * Run models anonymously 👻.
-* Monitor pending predictions ⏰.
+* Monitor pending predictions 😴.
 * Lightweight - under 100 lines of code 🔥.
 
 
@@ -77,7 +77,7 @@ const prediction = await replicate
       prompt: "an astronaut riding on a horse",
     },
     {
-      onUpdate: prediction => {
+      onUpdate(prediction) {
         console.log(prediction.status)
       },
     },
@@ -89,48 +89,7 @@ console.log(prediction.output)
 ```
 
 
-## Examples
-
-### 1. Visual Question-answering with [blip](https://replicate.com/salesforce/blip)
-
-```js
-import replicate from "node-replicate"
-
-const prediction = await replicate
-  .model(
-    "salesforce/blip:2e1dddc8621f72155f24cf2e0adbde548458d3cab9f00c0139eea840d0ac4746",
-   )
-  .predict({
-    image: 'https://replicate.delivery/pbxt/IVSaMZb8iBkELQvQya84wz5i1YfQC1HxrtSfSaL4QRTtsOlP/cat.jpg',
-    question: "What color is the cat?",
-    task: "visual_question_answering",
-  })
-
-console.log(prediction.output)
-
-// "Answer: orange"
-```
-
-
-### 2. Image Style Transfer with [clipstyler](https://replicate.com/paper11667/clipstyler)
-
-```js
-import replicate from "node-replicate"
-
-const prediction = await replicate
-  .model(
-    "salesforce/blip:2e1dddc8621f72155f24cf2e0adbde548458d3cab9f00c0139eea840d0ac4746",
-   )
-  .predict({
-    image: "https://replicate.delivery/pbxt/IVSrp3308R8Uq0sJx6yAozDSuLswkkq6IlaOS5liUI7TCwAU/cat.jpg",
-    iterations: 100,
-    text: "made from leaves",
-  })
-
-console.log(prediction.output)
-
-// [ ... ]
-```
+## API
 
 
 ## Contributing 
