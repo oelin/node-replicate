@@ -4,10 +4,6 @@
   "description": "A Node.js client for Replicate.",
   "type": "module",
   "main": "src/index.js",
-  "files": [
-    "/src",
-    "/README.md"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/oelin/node-replicate.git"
@@ -27,6 +23,6 @@
   },
   "homepage": "https://github.com/oelin/node-replicate#readme",
   "dependencies": {
-    "chiaki": "^1.0.5"
+    "chiaki": "^1.0.6"
   }
 }
