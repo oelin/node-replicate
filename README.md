@@ -63,7 +63,7 @@ console.log(prediction.output)
 // [ "https://replicate.delivery/pbxt/f4nlztv3uz1iFC4AEf2wBYQGTezdVeysvtZUtwfsvZOJDN6AC/out-0.png" ]
 ```
 
-You can also monitor pending predictions with `onUpdate()`.
+You can also monitor a pending prediction with `onUpdate()`.
 
 ```js
 import replicate from "node-replicate"
