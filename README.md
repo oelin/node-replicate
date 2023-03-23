@@ -91,4 +91,4 @@ console.log(prediction.output)
 
 ## Contributing 
 
-Have a feature you'd like to see included? Create a [pull request](https://github.com/oelin/node-replicate/pulls) or open an [issue](https://github.com/oelin/node-replicate/issues).
+Have a feature you'd like to see added? Create a [pull request](https://github.com/oelin/node-replicate/pulls) or open an [issue](https://github.com/oelin/node-replicate/issues).
