@@ -8,15 +8,13 @@ import replicate from "node-replicate"
 
 const prediction = await replicate
   .model(
-    "stability-ai/stable-diffusion:db21e45d3f7023abc2a46ee38a23973f6dce16bb082a930b0c49861f96d1e5bf",
+    "owner/model:version",
    )
   .predict({
     prompt: "an astronaut riding on a horse",
   })
 
 console.log(prediction.output)
-
-// [ "https://replicate.delivery/pbxt/f4nlztv3uz1iFC4AEf2wBYQGTezdVeysvtZUtwfsvZOJDN6AC/out-0.png" ]
 ```
 
 <img src='https://replicate.delivery/pbxt/f4nlztv3uz1iFC4AEf2wBYQGTezdVeysvtZUtwfsvZOJDN6AC/out-0.png' width='100%'>
