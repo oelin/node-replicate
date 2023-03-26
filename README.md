@@ -24,6 +24,6 @@ You can also run a model without awaiting the result:
 let prediction = await replicate.create(model, input)
 ```
 
-```
+```js
 prediction = await replicate.next(prediction)
 ```
