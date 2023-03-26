@@ -9,7 +9,7 @@ import Replicate from "replicate"
 const replicate = new Replicate()
 ```
 
-Run a model and await the result:
+Run a model.
 
 ```js
 const model = "owner/model:version"
@@ -17,8 +17,7 @@ const input = { text: "Hello, world!" }
 const output = await replicate.run(model, input)
 ```
 
-You can also run a model without awaiting the result:
-
+Run a model without waiting for the result.
 
 ```js
 let prediction = await replicate.create(model, input)
