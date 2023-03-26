@@ -14,7 +14,7 @@ export default class Replicate {
 	async run(model, inputs) {
 		let prediction = await this.create(model, inputs)
 
-		while (! prediction.hasTerminalStatus()) {
+		while (! ['canceled', 'succeeded', 'failed'].includes(prediction.status)) {
 			await sleep(250)
 			prediction = await prediction.get()
 		}
