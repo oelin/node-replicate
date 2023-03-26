@@ -20,3 +20,10 @@ const output = await replicate.run(model, input)
 You can also run a model without awaiting the result:
 
 
+```js
+let prediction = await replicate.create(model, input)
+```
+
+```
+prediction = await replicate.next(prediction)
+```
