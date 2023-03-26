@@ -1,5 +1,4 @@
 import fetch from 'chiaki'
-import Prediction from './prediction.js'
 
 
 export default class Replicate {
@@ -13,10 +12,15 @@ export default class Replicate {
 			'failed'
 		].includes(prediction.status)) {
 			await new Promise(_ => setTimeout(_, 250))
-			prediction = await prediction.get()
+			prediction = await this.get(prediction)
 		}
 
 		return prediction
+	}
+	
+	async get(prediction) {
+		return await fetch(`https://replicate.com/api/models${prediction.version.model.absolute_url}/versions/${prediction.version_id}/predictions/${prediction.uuid}`)
+			.then(response => JSON.parse(response.body).prediction)
 	}
 
 	async create(model, inputs) {
@@ -31,7 +35,6 @@ export default class Replicate {
 			},
 			body: JSON.stringify({ inputs }),
 		})
-		.then(response => JSON.parse(response.body))
-		.then(response => new Prediction(response))
+		.then(response => JSON.parse(response.body).prediction)
 	}
 }
