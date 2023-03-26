@@ -25,5 +25,5 @@ let prediction = await replicate.create(model, input)
 ```
 
 ```js
-prediction = await replicate.next(prediction)
+prediction = await replicate.get(prediction)
 ```
