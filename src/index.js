@@ -12,7 +12,7 @@ export default class Replicate {
 			'succeeded', 
 			'failed'
 		].includes(prediction.status)) {
-			await new Promise(r => setTimeout(r, 250))
+			await new Promise(_ => setTimeout(_, 250))
 			prediction = await prediction.get()
 		}
 
