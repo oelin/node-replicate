@@ -23,6 +23,6 @@
   },
   "homepage": "https://github.com/oelin/node-replicate#readme",
   "dependencies": {
-    "chiaki": "^1.0.9"
+    "chiaki": "^1.0.8"
   }
 }
