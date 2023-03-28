@@ -51,10 +51,12 @@ You can also monitor pending predictions with `replicate.create()`.
 ```js
 let prediction = await replicate.create(model, input)
 
-prediction = await replicate.get(prediction)
+while (! prediction.status == "succeeded") {
+  console.log(prediction.status)
+  
+  prediction = await replicate.get(prediction)
+}
 ```
-
-Once the prediction has succeeded, `prediction.status` will be set to `"succeeded"`.
 
 
 ## Contributing
